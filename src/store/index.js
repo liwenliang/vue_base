@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import index from '@/pages/store/index'
+import app from './modules/app'
+import getters from './getters'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    index: index
-  }
+    app
+  },
+  getters
 })

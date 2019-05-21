@@ -1,13 +1,12 @@
-// 获取实例
-export default {
+const app = {
   namespaced: true,
   state: {
-
+    appName: 'Hello'
   },
   mutations: {
-
   },
   actions: {
-
   }
 }
+
+export default app
