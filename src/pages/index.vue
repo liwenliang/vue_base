@@ -3,48 +3,40 @@
 </template>
 
 <script>
-  export default {
-    name: 'index',
+export default {
+  name: 'index',
 
-    /**
+  /**
      * 创建
      */
-    created() {
+  created () {
 
-    },
+  },
 
-    /**
+  /**
      * 数据
      */
-    data: () => ({
-      msg: 'Hello ~ '
-    }),
+  data: () => ({
+    msg: 'Hello world ~ '
+  }),
 
-    /**
+  /**
      * 监听字段变化，执行相关逻辑方法
      */
-    watch: {
+  watch: {},
 
-    },
-
-    /**
+  /**
      * 计算属性
      */
-    computed: {
+  computed: {},
 
-    },
-
-    /**
+  /**
      * 方法
      */
-    methods: {
+  methods: {},
 
-    },
-
-    components: {
-
-    }
-  }
+  components: {}
+}
 </script>
 
 <style scoped>
