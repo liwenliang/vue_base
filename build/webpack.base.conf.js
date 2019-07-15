@@ -43,7 +43,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 100000000, // 把所有图片都打包到文件里
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },

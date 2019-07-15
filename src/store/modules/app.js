@@ -1,7 +1,7 @@
 const app = {
   namespaced: true,
   state: {
-    appName: 'Hello'
+    appName: '请刷卡登录'
   },
   mutations: {
   },
