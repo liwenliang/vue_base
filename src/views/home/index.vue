@@ -1,31 +1,48 @@
 <template>
-  <div>
-    <h1>{{ appName }}</h1>
-    <ol>
-      <li>mapGetters使用</li>
-      <li>scss文件引用方式使用</li>
-      <li>项目使用eslint检查代码规范</li>
-    </ol>
+  <div class="container">
+    <div class="banner"></div>
+    <desc-area></desc-area>
+    <div class="action">
+      <a href="javascript:;" class="btn" @click="gotoBuy">申请我的挪车码</a>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import descArea from '@/components/DescArea'
 
 export default {
   name: 'Home',
-  computed: {
-    ...mapGetters([
-      'appName'
-    ])
+  components: {
+    descArea
+  },
+  methods: {
+    gotoBuy() {
+      this.$router.push({name: 'Buy'})
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
-  // @代表src目录，这里只是演示了样式的引用方式，实际使用的时候可以直接在这里写
-  /*@import "@/assets/scss/home.scss";*/
-  h1 {
-    color: blueviolet;
+  .banner {
+    height: 3.62rem;
+    background: #88d458;
+  }
+
+  .action {
+    margin-top: .5rem;
+    .btn {
+      display: block;
+      width: 6.76rem;
+      height: .96rem;
+      background: #6dbd3a;
+      margin: 0 auto;
+      border-radius: .1rem;
+      text-align: center;
+      color: #fff;
+      font-size: .36rem;
+      line-height: .96rem;
+    }
   }
 </style>
