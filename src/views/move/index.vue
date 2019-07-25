@@ -8,6 +8,9 @@
         <p>拨打电话</p>
         <p>通知车主</p>
       </div>
+      <div class="wave-container">
+        <div class="wave"></div>
+      </div>
     </div>
     <div class="options">
       <a class="opt-text" href="javascript:;" @click="gotoBuy">我也要申请挪车码></a>
@@ -35,9 +38,10 @@
 <style scoped lang="scss">
   .topbanner {
     height: 6.53rem;
-    background: url("../../assets/img/bannerBg.png") no-repeat;
+    background: url("../../assets/img/bannerBg_1.png") no-repeat;
     background-position: left bottom;
     background-size: 100% 100%;
+    position: relative;
 
     .please-info {
       box-sizing: border-box;
@@ -58,9 +62,26 @@
       margin: .33rem auto;
       width: 2.25rem;
       height: 2.25rem;
+      color: #8b9a82;
       border-radius: 50%;
-      border: .2rem solid #bbe79f;
+      border: .2rem solid #92d56d;
       background-color: white;
+      animation: size_wave 5s linear infinite;
+
+      @keyframes size_wave {
+        0% {
+          border-color: #92d56d;
+          color: #92d56d;
+        }
+        50% {
+          border-color: #75c259;
+          color: #75c259;
+        }
+        100% {
+          border-color: #92d56d;
+          color: #92d56d;
+        }
+      }
 
       .icon-call {
         display: block;
@@ -73,8 +94,30 @@
 
       p {
         font-size: .27rem;
-        color: #8b9a82;
         text-align: center;
+      }
+    }
+
+    .wave-container {
+      position: absolute;
+      bottom: 0;
+      width: 7.5rem;
+      overflow: hidden;
+      .wave {
+        width: 20rem;
+        height: 1rem;
+        background: url("../../assets/img/wave1.png") no-repeat;
+        background-size: 100% 100%;
+        animation: move_wave 3s linear infinite;
+      }
+
+      @keyframes move_wave {
+        0% {
+          transform: translateX(0)
+        }
+        100% {
+          transform: translateX(-45%)
+        }
       }
     }
   }
