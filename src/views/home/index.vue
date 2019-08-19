@@ -5,7 +5,7 @@
       <li>mapGetters使用</li>
       <li>scss文件引用方式使用</li>
       <li>项目使用eslint检查代码规范</li>
-      <li>jenkins 非常好用</li>
+      <li>jenkins 非常好用！</li>
     </ol>
   </div>
 </template>
