@@ -1,2 +1,2 @@
-# vue_base
-一个vue项目的基本结构，vuex，vue-router
+# CSS Mastery
+这个是CSS Mastery的练习分支
